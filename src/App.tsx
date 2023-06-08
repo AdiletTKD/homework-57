@@ -4,6 +4,7 @@ import './App.css';
 import Users from './components/Users/Users';
 import UserFrom from './components/UserForm/UserForm';
 import { IUser } from './types';
+import User from './components/Users/User';
 
 function App() {
   const [users, setUsers] = useState<IUser[]>([]);
@@ -20,8 +21,7 @@ function App() {
             <UserFrom onSubmit={addUser}/>
           </div>
           <div className="col-6">
-            <Users/>
-            <Users/>
+            <User items={ users} />
           </div>
         </div>
       </main>

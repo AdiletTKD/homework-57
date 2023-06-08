@@ -4,3 +4,10 @@ export interface IUser {
     email: string;
     role: string;
 }
+
+export interface IUserMutation {
+    name: string;
+    email: string;
+    role: string;
+}
+
