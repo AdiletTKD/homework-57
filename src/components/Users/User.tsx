@@ -6,18 +6,16 @@ interface Props {
     users: IUser[];
 }
 
-const User: React.FC<IUser> = (users) => {
-    return (
-        <>
-            <h4>Dishes</h4>
-            {users.map((item: IUser) => (
-                <Users
-                key={item.id}
-                user={item}
-                />
-            ))}
-        </>
-    )
+const User: React.FC<Props> = ({users}) => {
+  return (
+    <>
+      <h4>Users</h4>
+      {users.map((item: IUser) => (
+        <Users key={item.id} user={item} />
+      ))}
+    </>
+  );
 };
+
 
 export default User;

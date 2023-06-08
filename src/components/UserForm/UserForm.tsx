@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { IUser, IUserMutation } from '../../types';
+import { nanoid } from 'nanoid';
 
 interface Props {
     onSubmit: (user: IUser) => void;
@@ -62,10 +63,10 @@ const UserFrom: React.FC<Props> = ({ onSubmit }) => {
           className="form-check-input"
         />
                   
-        <label >No</label>
+        <label>No</label>
         <input
           type="checkbox"
-          id="checkbox"
+          id="checkbox-2"
           value=""
           className="form-check-input"
         />
@@ -79,7 +80,7 @@ const UserFrom: React.FC<Props> = ({ onSubmit }) => {
           value={user.role} 
           onChange={changeUser}
           >
-            <option selected>Open this select menu</option>
+            <option selected>Select role</option>
             <option value="1">user</option>
             <option value="2">editor</option>
             <option value="3">admin</option>
@@ -87,13 +88,10 @@ const UserFrom: React.FC<Props> = ({ onSubmit }) => {
       </div>
       
 
-      <button type="submit" className="btn btn-primary mt-3">Create</button>
+      <button type="submit" className="btn btn-primary mt-3">Add</button>
     </form>
   );
 };
 
 export default UserFrom;
 
-function nanoid(): string {
-    throw new Error('Function not implemented.');
-}

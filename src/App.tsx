@@ -21,7 +21,7 @@ function App() {
             <UserFrom onSubmit={addUser}/>
           </div>
           <div className="col-6">
-            <User items={ users} />
+            <User users={ users} />
           </div>
         </div>
       </main>
